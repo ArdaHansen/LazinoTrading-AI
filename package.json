@@ -1,0 +1,19 @@
+{
+  "name": "lazinotrading-ai",
+  "version": "0.1.0-alpha",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "start": "npm run start -w backend",
+    "lint": "npm run lint -w frontend",
+    "test": "npm run test -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

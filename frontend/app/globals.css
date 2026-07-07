@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: #05070a;
+  color: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  @apply rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/30;
+}
+
+.page-shell {
+  @apply mx-auto max-w-7xl px-6 py-10 sm:px-8 lg:px-10;
+}
+
+.eyebrow {
+  @apply mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300;
+}
+
+.btn {
+  @apply rounded-xl bg-cyan-400 px-4 py-2.5 font-semibold text-slate-950 transition hover:bg-cyan-300;
+}
+
+.input {
+  @apply w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none transition focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-400/20;
+}

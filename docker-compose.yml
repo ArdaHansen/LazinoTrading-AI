@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: lazinotrading-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-lazinotrading}
+      POSTGRES_USER: ${POSTGRES_USER:-lazino}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-change_me}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: lazinotrading-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres-data:

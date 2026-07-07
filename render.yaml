@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: lazinotrading-ai-frontend
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+  - type: web
+    name: lazinotrading-ai-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: FRONTEND_URL
+        value: https://lazinotrading-ai-frontend.onrender.com
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        value: postgres://user:password@host:5432/db
