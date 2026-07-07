@@ -1,4 +1,4 @@
-# LazinoTrading AI
+# LazinoTrading AI Code Nicht Komplett
 
 Private AI-powered trading research and automation platform for strategy development, paper trading, market analysis and future machine-learning experiments.
 
